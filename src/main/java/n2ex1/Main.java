@@ -2,20 +2,20 @@ package n2ex1;
 
 public class Main {
     public static void main(String[] args) {
-        Pasarela pasarela = new Pasarela(MetodoDePago.PAYPAL);
-        pasarela.pagar(new Pago() {
+        PaymentGateway paymentGateway = new PaymentGateway(PaymentMethod.PAYPAL);
+        paymentGateway.pagar(new Payment() {
             @Override
             public void pagar() {
-                System.out.println("Se paga mediante " + pasarela.getMetodoDePago());
+                System.out.println("Se paga mediante " + paymentGateway.getMetodoDePago());
             }
         });
         System.out.println("Pago realizado con éxito.");
 
-        Pasarela pasarela1 = new Pasarela(MetodoDePago.CUENTA_BANCARIA);
-        pasarela.pagar(new Pago() {
+        PaymentGateway paymentGateway1 = new PaymentGateway(PaymentMethod.CUENTA_BANCARIA);
+        paymentGateway.pagar(new Payment() {
             @Override
             public void pagar() {
-                System.out.println("Se paga mediante " + pasarela1.getMetodoDePago());
+                System.out.println("Se paga mediante " + paymentGateway1.getMetodoDePago());
             }
         });
         System.out.println("Pago realizado con éxito.");

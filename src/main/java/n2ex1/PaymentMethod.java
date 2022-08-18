@@ -1,6 +1,6 @@
 package n2ex1;
 
-public enum MetodoDePago {
+public enum PaymentMethod {
     TARJETA_CREDITO,
     PAYPAL,
     CUENTA_BANCARIA

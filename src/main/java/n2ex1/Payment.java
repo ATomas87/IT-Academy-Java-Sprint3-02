@@ -1,5 +1,5 @@
 package n2ex1;
 
-public interface Pago {
+public interface Payment {
     void pagar();
 }
