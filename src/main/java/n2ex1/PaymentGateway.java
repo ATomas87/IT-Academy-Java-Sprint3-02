@@ -11,8 +11,8 @@ public class PaymentGateway {
     public PaymentMethod getMetodoDePago(){
         return this.paymentMethod;
     }
-    public void pagar(Payment payment){
+    public void pay(Payment payment){
         System.out.println("Iniciando pago...");
-        payment.pagar();
+        payment.pay();
     }
 }
